@@ -17,6 +17,7 @@ class App extends Component {
           todos={this.state.todos}
           onAddTodo={this.handleAddTodo}
           onDeleteTodo={this.handleDeleteTodo}
+          onCheckboxChange={this.handleCheck}
         />
       </React.Fragment>
     );
@@ -31,6 +32,15 @@ class App extends Component {
   handleDeleteTodo = (indx) => {
     const arr = this.state.todos.filter((todo, index) => index !== indx);
     this.setState({todos: arr});
+  }
+
+  handleCheck = (id) => {
+    this.setState({todos: this.state.todos.map((todo, index)=>{
+      if(index === id){
+        todo.completed = !todo.completed;
+      }
+      return todo;
+    }) });
   }
 }
 export default App;
