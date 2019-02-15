@@ -1,0 +1,79 @@
+body{
+  margin: 0;
+  background-color: white;
+}
+
+.header {
+  text-align: center;
+  background: #d9534f;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+h1 {
+  margin: 0;
+  color: white;
+}
+
+.add_new {
+  background: lightgray;
+  padding: 20px 10px 15px 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.add_new input[type=text] {
+  background: white;
+  outline: none;
+  border: none;
+  padding: 5px;
+  margin-right: 15px;
+  text-indent: 5px;
+  flex-grow: 1;
+  max-width: 500px;
+}
+
+.add_new button {
+  border: none;
+  outline: none;
+  background: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+}
+
+.todoitem {
+  display: flex;
+  /*background: ;*/
+  min-height: 60px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  border-bottom: 1px solid lightgray;
+}
+
+.todoitem::before {
+  content: '';
+  background-color: #d9534f;
+  width: 10px;
+  height: 45px;
+}
+
+.todoitem input[type=checkbox]{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+.todotitle {
+  flex-grow: 1;
+  max-width: 500px;
+  margin-right: 15px;
+  padding: 10px 0;
+}
